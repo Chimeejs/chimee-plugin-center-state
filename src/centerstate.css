@@ -1,0 +1,99 @@
+chimee-center-state{
+   position: absolute; 
+}
+
+/* 状态动画 */
+@keyframes animate {
+  from{
+    opacity: 1;
+  }
+  to{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* 全部初始皆为隐藏状态 */
+chimee-center-state-error,
+chimee-center-state-correct,
+chimee-center-state-loading,
+chimee-center-state-tip{
+  display: none;
+}
+
+chimee-center-state.error chimee-center-state-error,
+chimee-center-state.correct chimee-center-state-correct,
+chimee-center-state.loading chimee-center-state-loading,
+chimee-center-state.tip chimee-center-state-tip{
+  display: inline-block;
+}
+chimee-center-state-correct{
+  width: 104px;
+  height: 104px;
+}
+
+chimee-center-state-tip{
+  position: absolute;
+  left: 26px;
+  bottom: 26px;
+  width: 52px;
+  height: 52px;
+  border-radius: 26px;
+  background: rgba(0, 0, 0, .5);
+  animation: animate .5s linear 1 normal forwards;
+}
+
+chimee-center-state.play span{
+  background-image: url('./image/play.svg');
+}
+chimee-center-state.pause span{
+  background-image: url('./image/pause.svg');
+}
+chimee-center-state.back span{
+  background-image: url('./image/back.svg');
+}
+chimee-center-state.forward span{
+  background-image: url('./image/forward.svg');
+}
+chimee-center-state.volume-high span{
+  background-image: url('./image/volume-high.svg');
+}
+chimee-center-state.volume-low span{
+  background-image: url('./image/volume-low.svg');
+}
+
+chimee-center-state-tip span{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 14px;
+  background-origin: content-box;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+chimee-center-state-loading{
+  width: 52px;
+  height: 52px;
+  padding: 26px;
+  background-image: url('./image/loading.svg');
+  background-origin: content-box;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+chimee-center-state-error{
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  font-size: 16px;
+  z-index: 9;
+  color: rgb(255, 207, 0);
+  text-shadow: 0 0 3px rgb(255, 0, 0);
+  font-weight: 100;
+}
