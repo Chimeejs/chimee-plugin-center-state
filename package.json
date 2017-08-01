@@ -1,7 +1,7 @@
 {
-  "name": "chimee-plugin-cencer-state",
-  "version": "0.0.2",
-  "description": "cencer-state for chimee",
+  "name": "chimee-plugin-center-state",
+  "version": "0.0.4",
+  "description": "center-state for chimee",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "jsnext:main": "lib/index.mjs",
@@ -20,24 +20,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chimeejs/chimee-plugin-cencer-state.git"
+    "url": "git+https://github.com/Chimeejs/chimee-plugin-center-state.git"
   },
   "keywords": [
     "plugin",
     "chimee",
-    "cencer-state",
+    "center-state",
     "video"
   ],
   "author": "yandeqiang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Chimeejs/chimee-plugin-cencer-state/issues"
+    "url": "https://github.com/Chimeejs/chimee-plugin-center-state/issues"
   },
-  "homepage": "https://github.com/Chimeejs/chimee-plugin-cencer-state#readme",
+  "homepage": "https://github.com/Chimeejs/chimee-plugin-center-state#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "chimee-helper": "^0.1.10",
-    "toxic-decorators": "^0.3.3"
+    "toxic-decorators": "^0.3.3",
+    "chimee-plugin-popup": "0.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -48,18 +49,21 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "chimee": "^0.2.2",
     "cssnano": "^3.10.0",
     "eslint": "^4.2.0",
     "eslint-plugin-jest": "^20.0.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
+    "postcss-base64": "^0.7.1",
     "postcss-nested": "^2.0.2",
     "rollup": "^0.45.1",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^0.5.3",
-    "rollup-plugin-uglify": "^2.0.1"
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-watch": "^4.3.1"
   },
   "jest": {
     "modulePaths": [

@@ -47,6 +47,14 @@ const chimeeCenterState = popupFactory({
       this.clearTimeout();
     },
     keydown (e) {
+      
+      // controlbar 存在，才会有键盘事件，因此如果 controlbar 组件没有加载时，return
+      const hasControlbar = this.$videoConfig.plugin.some(item => {
+        const name = item.name || item;
+        return name === 'chimeeControl';
+      })
+      if (!hasControlbar) return;
+
       e.stopPropagation();
       switch (e.keyCode) {
         case 37: {
@@ -116,4 +124,4 @@ const chimeeCenterState = popupFactory({
   }
 });
 
-module.exports = chimeeCenterState;
+export default chimeeCenterState;
