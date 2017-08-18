@@ -73,6 +73,10 @@ chimee-center-state-tip span{
   background-position: center center;
 }
 
+chimee-center-state.play span{
+  background-position: 110% 50%;
+}
+
 chimee-center-state-loading{
   width: 52px;
   height: 52px;

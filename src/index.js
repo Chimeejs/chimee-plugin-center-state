@@ -36,6 +36,9 @@ const chimeeCenterState = popupFactory({
     playing () {
       this.playing();
     },
+    loadstart () {
+      this.waiting();
+    },
     waiting () {
       this.waiting();
     },
