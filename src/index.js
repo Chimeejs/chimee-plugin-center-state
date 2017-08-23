@@ -37,7 +37,7 @@ const chimeeCenterState = popupFactory({
       this.playing();
     },
     loadstart () {
-      this.waiting();
+      this.waiting('loadstart');
     },
     waiting () {
       this.waiting();
@@ -89,11 +89,11 @@ const chimeeCenterState = popupFactory({
       this.showLoading(false);
       this.showError(false);
     },
-    waiting () {
+    waiting (status) {
       this.clearTimeout();
       // 加载超过20秒则超时显示异常
       this._timeout = setTimeout(() => this.showError(), 3e4);
-      !this.paused && this.showLoading();
+      (status === 'loadstart' || !this.paused) && this.showLoading();
     },
     clearTimeout () {
       if (this._timeout) {

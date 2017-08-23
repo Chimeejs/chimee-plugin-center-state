@@ -71,6 +71,7 @@ chimee-center-state-tip span{
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center center;
+  box-sizing: initial;
 }
 
 chimee-center-state.play span{
