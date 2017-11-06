@@ -17,6 +17,9 @@ const chimeeCenterState = popupFactory({
   offset: '50%',
   hide: false,
   create () {},
+  inited () {
+    this.src && this.showLoading(true);
+  },
   penetrate: true,
   operable: false,
   destroy () {
