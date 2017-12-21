@@ -1,4 +1,4 @@
-# chimee-plugin-controlbar
+# chimee-plugin-center-state
 
 ## install
 
