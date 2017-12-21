@@ -13,6 +13,16 @@ chimee-center-state{
   }
 }
 
+/* loading 动画 */
+@keyframes loading {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 /* 全部初始皆为隐藏状态 */
 chimee-center-state-error,
 chimee-center-state-correct,
@@ -87,6 +97,7 @@ chimee-center-state-loading{
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center center;
+  animation: loading 1.2s linear infinite;
 }
 
 chimee-center-state-error{

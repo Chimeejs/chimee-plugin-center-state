@@ -37,8 +37,10 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "chimee-helper": "^0.1.10",
-    "toxic-decorators": "^0.3.3",
-    "chimee-plugin-popup": "0.0.2"
+    "chimee-plugin-popup": "0.0.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "toxic-decorators": "^0.3.3"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

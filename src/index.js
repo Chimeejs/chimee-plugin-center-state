@@ -18,6 +18,7 @@ const chimeeCenterState = popupFactory({
   hide: false,
   create () {},
   inited () {
+    console.log(this)
     this.src && this.showLoading(true);
   },
   penetrate: true,
@@ -50,6 +51,7 @@ const chimeeCenterState = popupFactory({
     //   this.showLoading();
     // },
     timeupdate () {
+      this.showLoading(false);
       this.clearTimeout();
     },
     keydown (e) {
@@ -96,7 +98,7 @@ const chimeeCenterState = popupFactory({
       this.clearTimeout();
       // 加载超过20秒则超时显示异常
       this._timeout = setTimeout(() => this.showError(), 3e4);
-      (status === 'loadstart' || !this.paused) && this.showLoading();
+      (status === 'loadstart' || !this.paused) && this.showLoading(true);
     },
     clearTimeout () {
       if (this._timeout) {
