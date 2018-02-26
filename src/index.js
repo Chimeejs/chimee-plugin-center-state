@@ -1,7 +1,14 @@
+import {deepAssign, isObject} from 'chimee-helper';
+
 import './centerstate.css';
 import popupFactory from 'chimee-plugin-popup';
 
 const clss = 'correct tip play pause back forward volume-high volume-low';
+
+const defaultConfig = {
+  errorTips: '加载失败，请刷新重试'
+};
+
 const chimeeCenterState = popupFactory({
   name: 'chimeeCenterState',
   tagName: 'chimee-center-state',
@@ -12,13 +19,14 @@ const chimeeCenterState = popupFactory({
         <span></span>
       </chimee-center-state-tip>
     </chimee-center-state-correct>
-    <chimee-center-state-error>加载失败，请刷新重试</chimee-center-state-error>
+    <chimee-center-state-error></chimee-center-state-error>
   `,
   offset: '50%',
   hide: false,
   create () {},
   inited () {
-    console.log(this)
+    this.config = isObject(this.$config) ? deepAssign(defaultConfig, this.$config) : defaultConfig;
+    this.$dom.querySelector('chimee-center-state-error').innerText = this.config.errorTips;
     this.src && this.showLoading(true);
   },
   penetrate: true,

@@ -28,7 +28,12 @@
     const player = new Chimee({
       wrapper: '#wrap',
       src: 'http://yunxianchang.live.ujne7.com/vod-system-bj/103_371ab0c0fda-143d-4755-8727-d3cd12dce02d.mp4',
-      plugin: [chimeePluginCenterState.name],
+      plugin: [
+        {
+          name: chimeePluginCenterState.name,
+          errorTips: 'cuowuaaa'
+        }
+      ],
       controls: true,
       autoplay: false
     });

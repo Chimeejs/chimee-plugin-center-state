@@ -23,7 +23,8 @@ const player = new chimee({
   // ...
   // 使用插件
   plugin: [
-    chimeePluginCenterState.name
+    chimeePluginCenterState.name,
+    errorTips: 'xxx' // 自定义错误信息
   ]
 });
 ```
