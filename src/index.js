@@ -27,7 +27,8 @@ const chimeeCenterState = popupFactory({
   inited () {
     this.config = isObject(this.$config) ? deepAssign(defaultConfig, this.$config) : defaultConfig;
     this.$dom.querySelector('chimee-center-state-error').innerText = this.config.errorTips;
-    this.src && this.showLoading(true);
+    this.src && (this.preload === 'auto' || this.preload === 'metadata' || this.preload === '' || this.autoplay === true) && this.showLoading(true);
+ 
   },
   penetrate: true,
   operable: false,
