@@ -11,6 +11,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import uglify from 'rollup-plugin-uglify';
+import replace from 'rollup-plugin-replace';
 
 // PostCSS plugins
 import nested from 'postcss-nested';
@@ -89,7 +90,10 @@ export default function (modeConf) {
       }),
       babel(babelConfig[mode]),
       resolve(),
-      commonjs()
+      commonjs(),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      })
     ]
   };
   modeConf.uglify && config.plugins.push(uglify());
