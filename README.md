@@ -1,5 +1,7 @@
 # chimee-plugin-center-state
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Chimeejs/chimee-plugin-center-state.svg)](https://greenkeeper.io/)
+
 ## install
 
 安装
