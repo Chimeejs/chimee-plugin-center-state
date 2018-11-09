@@ -1,6 +1,6 @@
 {
   "name": "chimee-plugin-center-state",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "center-state for chimee",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
@@ -36,7 +36,7 @@
   "homepage": "https://github.com/Chimeejs/chimee-plugin-center-state#readme",
   "dependencies": {
     "chimee-helper": "git+https://github.com/Chimeejs/chimee-helper.git",
-    "chimee-plugin-popup": "git+https://github.com/Chimeejs/chimee-plugin-popup.git"
+    "chimee-plugin-popup": "0.0.7"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
