@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/Chimeejs/chimee-plugin-center-state#readme",
   "dependencies": {
-    "chimee-helper": "git+https://github.com/Chimeejs/chimee-helper.git",
+    "chimee-helper": "^0.2.11",
     "chimee-plugin-popup": "0.0.7"
   },
   "devDependencies": {
